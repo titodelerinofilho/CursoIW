@@ -17,13 +17,21 @@ const CARD_VERSO = document.getElementById('card-verso');
 
 
 function mostrarFrente () {
+  CARD_VERSO.classList.add('animate__flipOutY');
   CARD_FRENTE.classList.remove('d-none');
-  CARD_VERSO.classList.add('d-none');
+  CARD_FRENTE.classList.add('animate__flipInY');
+  CARD_VERSO.classList.add('d-block');
+
 }
 
 function mostrarVerso () {
-  CARD_VERSO.classList.remove('d-none');
+  CARD_FRENTE.classList.add('animate__flipOutY');
   CARD_FRENTE.classList.add('d-none');
+  CARD_VERSO.classList.remove('d-none');
+  CARD_VERSO.classList.add('animate__flipInY');
+  CARD_FRENTE.classList.add('d-block');
+
+
 }
 
 let meses = [
